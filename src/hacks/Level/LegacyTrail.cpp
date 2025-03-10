@@ -18,7 +18,7 @@ namespace eclipse::hacks::Level {
 				->handleKeybinds()
 				->setDescription("Restore the trail effect from older versions.")
 				->addOptions([](std::shared_ptr<gui::MenuTab> options) {
-					options->addIntToggle("Points", "level.legacytrail.max_points", 10, 20);
+					options->addIntToggle("Points", "level.legacytrail.max_points", 1, 20);
 				});
 		}
 
@@ -38,7 +38,7 @@ namespace eclipse::hacks::Level {
 
 				m_tPositionR = cocos2d::CCPoint{ .0f, .0f };
 				m_bFastMode = true;
-				m_fMinSeg = (minSeg == -1.f) ? stroke / 5.0f : minSeg;
+				m_fMinSeg = (minSeg == -1.5f) ? stroke / 5.0f : minSeg;
 				m_fMinSeg *= m_fMinSeg;
 
 				m_fStroke = stroke;
